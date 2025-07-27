@@ -8,7 +8,6 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://reahespino.github.io',
-  base: 'reahespino.github.io',
   vite: {
     plugins: [tailwindcss()]
   },
