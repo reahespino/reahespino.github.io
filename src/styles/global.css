@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'DM Sans';
+    src: local('DM Sans Regular'), local('DMSans-Regular'),
+    url('fonts/DMSans-Regular.woff2') format('woff2'),
+    url('fonts/DMSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: local('Instrument Serif Italic'), local('InstrumentSerif-Italic'),
+    url('fonts/InstrumentSerif-Italic.woff2') format('woff2'),
+    url('fonts/InstrumentSerif-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: local('Instrument Serif Regular'), local('InstrumentSerif-Regular'),
+    url('fonts/InstrumentSerif-Regular.woff2') format('woff2'),
+    url('fonts/InstrumentSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-dm-sans: "DM Sans", "sans-serif";
+    --font-instrument-serif: "Instrument Serif", "serif";
+
+    --font-display: var(--font-instrument-serif);
+    --font-sans: var(--font-dm-sans);
+
+    --color-background: #F6F4EE;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-background);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100dvh;
+    }
+}
+
+@layer components {
+    .button {
+        font-family: var(--font-display);
+        background-color: var(--color-zinc-900);
+        color: var(--color-zinc-100);
+        padding: --spacing(3) --spacing(6);
+        display: inline-block;
+    }
+
+    .button:focus,
+    .button:hover {
+        background-color: var(--color-zinc-500);
+        color: var(--color-zinc-100);
+    }
+
+    .button--neutral {
+        background-color: var(--color-zinc-500);
+        color: var(--color-zinc-100);
+    }
+}
