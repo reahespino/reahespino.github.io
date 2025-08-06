@@ -66,8 +66,8 @@
         color: var(--color-zinc-100);
     }
 
-    .button--neutral {
-        background-color: var(--color-zinc-500);
-        color: var(--color-zinc-100);
+    .button--outline {
+        background-color: transparent;
+        color: #000000;
     }
 }
